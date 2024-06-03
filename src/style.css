@@ -1,0 +1,53 @@
+/* RESET CLASSICO */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* BACKGROUND SCURO SALVA OCCHI */
+body {
+  font-family: fredoka system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+/* COLORE PRINCIPALE */
+/* BACKGROUND  */
+.bg-red{
+  background-color:#E56768 ;
+}
+/* COLORE CLASSICO */
+.red{
+  color: #E56768;
+}
+/* GIALLO DEGLI OVER E DI ALTRI ELEMENTI */
+/* BACKGROUND  */
+.bg-yellow{
+  background-color: #E9D758;
+}
+/* COLORE */
+.yellow{
+  color: #E9D758;
+}
+/* COLOR SIMIL NERO UTILIZZATO NEI FONT SOPRATTUTTO NEGLI H1/H2/H3*/
+.black{
+  color: #3D404F;
+}
+
+
+/* I FONT TROVATI SONO PROBABILMENTE SBAGLIATI ESTENZIONE DI MERDA */
+/* QUESTO MI HA DETTO IL TROVA CARATTERE NON SONO SICURO DEL RISULTATO IN CASO SI CORREGGE*/
+
+/* QUA ANDRA IL FONT ARROTONDATO "FREDOKA ONE" */
+.round-font {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:600;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+/* QUA IL FONT UTILIZZATO PER ESEMPIO NEI PARAGRAFI "Source Sans Pro"*/
+.font{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
