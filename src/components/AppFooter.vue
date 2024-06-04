@@ -11,32 +11,46 @@ export default {
 
 <template>
     <div class="myBgRed">
-        <div class="myCont d-flex gap-4 justify-content-center">
+        <div class="myCont d-flex justify-content-center gap-5 py-5">
             <div class="leftCont">
                 <img class="w-100" src="/public/img/theme_eduprime_logo.png" alt="">
                 <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+                <div class="d-flex flex-row justify-content-around">
+                    <i class="fa-brands fa-facebook-f py-3 px-4"></i>
+                    <i class="fa-brands fa-twitter p-3"></i>
+                    <i class="fa-brands fa-instagram p-3"></i>
+                </div>
             </div>
             <ul>
                 <li>
-                    <h4 class="round-font"> {{ storeDave.headOne }} </h4>
+                    <h4 class="round-font mb-4"> {{ storeDave.headOne }} </h4>
                 </li>
-                <li v-for="links in storeDave.getLinks">
+                <li v-for="links in storeDave.getLinks" class="mb-2">
                     <a :href="links.url"> {{ links.link }} </a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <h4 class="round-font"> {{ storeDave.headTwo }} </h4>
+                    <h4 class="round-font mb-4"> {{ storeDave.headTwo }} </h4>
                 </li>
-                <li v-for="links in storeDave.netLinks">
+                <li v-for="links in storeDave.netLinks" class="mb-2">
                     <a :href="links.url"> {{ links.link }} </a>
                 </li>
             </ul>
-            <div class="rightCont">
+            <div class="rightCont d-flex flex-column gap-2">
                 <input type="text" placeholder="search...">
-                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <h3 class="round-font">Search categoris</h3>
-                
+                <a href="#"><i class="fa-solid fa-magnifying-glass mb-2"></i></a>
+                <h4 class="round-font">Search categoris</h4>  
+                <div class="d-flex flex-wrap gap-2 justify-content-end">
+                    <a class="btLinks" href="#">ECONOMY</a> 
+                    <a class="btLinks" href="#">DESIGN</a> 
+                    <a class="btLinks" href="#">COACHING</a> 
+                    <a class="btLinks" href="#">BUSINESS</a> 
+                    <a class="btLinks" href="#">MEDICINE</a> 
+                    <a class="btLinks" href="#">LAW</a> 
+                    <a class="btLinks" href="#">FITNESS</a> 
+                </div>
+                <p class="finalP"> ModelTheme. All rights reserved. </p>
             </div>
         </div>
     </div>
@@ -59,24 +73,62 @@ ul {
 a {
     color: white;
     text-decoration: none;
+    transition: 300ms ease;
+}
+li:hover a{
+    color: #e9d758;
 }
 .leftCont{
     width: 25rem;
 }
 .rightCont{
     position: relative;
+    width: 26rem;
 }
 input{
     border: transparent;
     border-radius: 30px;
     padding: 1rem;
-    width: 20rem;
+    width: 100%;
 }
 .fa-magnifying-glass{
     background-color: #e9d758;
-    padding: 1.2rem;
+    padding: 1.3rem;
     border-radius: 50%;
-    position: relative;
-    right: 3.4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.fa-magnifying-glass:hover{
+    background-color: #e56768;
+}
+.fa-brands{
+    font-size: 1.5rem;
+    border: 3px solid #e9d758;
+    border-radius: 50%;
+    transition: 300ms ease;
+}
+
+.fa-brands:hover {
+    background-color: #e9d758;
+    cursor: pointer;
+}
+.btLinks{
+    border: 1px solid white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 30px;
+    transition: 300ms ease;
+    font-size: 0.8rem;
+}
+
+.btLinks:hover{
+    background-color: #e9d758;
+    border: 1px solid transparent
+}
+.finalP{
+    color: #e9d758;
+    text-align: end;
+    margin-top: 1rem;
 }
 </style>
