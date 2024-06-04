@@ -7,10 +7,10 @@ export default {
 </script>
 
 <template>
-  <img class="svg-top" src="/public/img/svg/svg-0.svg" alt="">
+  <img class="svg-top" src="/public/img/svg/svg-0.svg" alt="" style="width: 100%;">
   <div class="background pb-5">
     <div class="myCont text-center">
-      <img src="/public/img/Clock-and-Bell.png" alt="" style="width: 60px;">
+      <img class="mb-4 mt-4" src="/public/img/Clock-and-Bell.png" alt="" style="width: 60px;">
       <h1 class="round-font">University year</h1>
       <div class="row justify-content-around position-relative mt-5">
         <div class="cardof first position-relative">
@@ -33,8 +33,8 @@ export default {
           <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
         </div>
       </div>
-      <img class="mt-4" src="/public/img/upcoming-events-calendar-icon.png" alt="" style="width: 60px;">
-      <h1 class="round-font">Upcoming Events</h1>
+      <img class="mt-4 mb-4" src="/public/img/upcoming-events-calendar-icon.png" alt="" style="width: 60px;">
+      <h1 class="round-font mb-5">Upcoming Events</h1>
       <div class="row justify-content-center gap-3">
         <div class="card col-3 p-5 mb-5">
           <h4 class="round-font">Coaching Session</h4>
@@ -77,9 +77,16 @@ export default {
   background-color: #e56768;
 }
 
+.svg-top {
+  width: 100%;
+  transform: translateY(5px);
+  margin: 0;
+}
+
 .svg {
   width: 100%;
   transform: translateY(-5px);
+  margin: 0;
 }
 
 h1 {
@@ -110,7 +117,6 @@ h1 {
 .button-white {
   padding: 16px 43px !important;
   background-color: #e9d758;
-  margin-left: 20px;
   border: transparent;
   color: #fff;
   border-radius: 32px;
@@ -121,7 +127,6 @@ h1 {
 .button-white:hover {
   padding: 16px 43px !important;
   background-color: transparent;
-  margin-left: 20px;
   color: #fff;
   border-radius: 32px;
   border: transparent;
