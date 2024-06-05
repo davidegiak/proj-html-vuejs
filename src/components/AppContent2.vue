@@ -1,8 +1,9 @@
 <script>
+import storeDave from '../data/storeDave.js';
 export default {
   data() {
     return {
-
+      storeDave
     }
   }
 }
@@ -16,25 +17,25 @@ export default {
       <img class="mb-4 mt-4" src="/img/Clock-and-Bell.png" alt="" style="width: 60px;">
       <h1 class="round-font">University year</h1>
       <div class="row position-relative mt-5">
-        <div v-for="x in 2" class="cardof first position-relative">
-          <h4 class="round-font">Demo Classes</h4>
-          <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
+        <div v-for="info in storeDave.info" class="cardof first position-relative">
+          <h4 class="round-font">{{ info.title }}</h4>
+          <p>{{ info.paragraf }}</p>
         </div>
       </div>
       <img src="/img/Timeline-Item.png" alt="">
       <div class="row position-relative">
-        <div v-for="x in 2" class="cardof therd position-relative">
-          <h4 class="round-font">Demo Classes</h4>
-          <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
+        <div v-for="info in storeDave.info" class="cardof therd position-relative">
+          <h4 class="round-font">{{ info.title }}</h4>
+          <p>{{ info.paragraf }}</p>
         </div>
       </div>
       <img class="mt-4 mb-4" src="/img/upcoming-events-calendar-icon.png" alt="" style="width: 60px;">
       <h1 class="round-font mb-5">Upcoming Events</h1>
       <div class="row justify-content-center gap-3">
-        <div v-for="x in 3" class="card col-3 p-5 mb-5">
-          <h4 class="round-font">Coaching Session</h4>
-          <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i> 20 May 21:30 PM</p>
-          <p class="lighter-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]</p>
+        <div v-for="x in storeDave.cards" class="card col-3 p-5 mb-5">
+          <h4 class="round-font">{{ x.title }}</h4>
+          <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i>{{ x.date }}</p>
+          <p class="lighter-color">{{ x.paragraf }}</p>
           <div class="btn-cont">
             <button type="button" class="button round-font">+ Find more</button>
           </div>

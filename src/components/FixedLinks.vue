@@ -21,7 +21,7 @@ export default {
             </div>
         </div>
     </section>
-    <section class="me-3 mb-3">
+    <section>
         <div class="right-cont align-self-end">
             <i class="fa-regular fa-envelope p-4 fs-4 rounded-circle"></i>
         </div>

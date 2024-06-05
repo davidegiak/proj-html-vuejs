@@ -1,10 +1,7 @@
 import { reactive } from 'vue';
 
-
-
-let footerLinks = reactive({
-    getLinks:
-    [
+let generalData = reactive({
+    getLinks: [
         {link:"Request a Website", url:"#"},
         {link:"Browse Themes", url:"#"},
         {link:"Payment options", url:"#"},
@@ -13,17 +10,25 @@ let footerLinks = reactive({
         {link:"Purchase Theme", url:"#"},
 
     ],
-    netLinks:
-    [
+    netLinks: [
         {link:"Purchase Theme", url:"#"},
         {link:"Our Benefits", url:"#"},
         {link:"Our Team", url:"#"},
         {link:"Other Products", url:"#"},
         {link:"My account", url:"#"}
     ],
+    info: [
+        {title:"Demo Classes", paragraf:"In the first week, students try to accommodate with the teaching style and choose their optional courses."},
+        {title:"Demo Classes", paragraf:"In the first week, students try to accommodate with the teaching style and choose their optional courses."},
+    ],
+    cards: [
+        {title:"Coaching Session", paragraf:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]", date:"20 May 21:30 PM"},
+        {title:"Coaching Session", paragraf:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]", date:"20 May 21:30 PM"},
+        {title:"Coaching Session", paragraf:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]", date:"20 May 21:30 PM"},
+    ],
     headOne:"Get EduPrime",
     headTwo:"Networking"
     
-})
+});
 
-export default (footerLinks)
+export default (generalData)
