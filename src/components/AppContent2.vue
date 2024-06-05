@@ -15,23 +15,15 @@ export default {
     <div class="myCont text-center">
       <img class="mb-4 mt-4" src="/img/Clock-and-Bell.png" alt="" style="width: 60px;">
       <h1 class="round-font">University year</h1>
-      <div class="row justify-content-around position-relative mt-5">
-        <div class="cardof first position-relative">
-          <h4 class="round-font">Demo Classes</h4>
-          <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
-        </div>
-        <div class="cardof second position-relative">
+      <div class="row position-relative mt-5">
+        <div v-for="x in 2" class="cardof first position-relative">
           <h4 class="round-font">Demo Classes</h4>
           <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
         </div>
       </div>
       <img src="/img/Timeline-Item.png" alt="">
-      <div class="row justify-content-around position-relative">
-        <div class="cardof therd position-relative">
-          <h4 class="round-font">Demo Classes</h4>
-          <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
-        </div>
-        <div class="cardof forth position-relative">
+      <div class="row position-relative">
+        <div v-for="x in 2" class="cardof therd position-relative">
           <h4 class="round-font">Demo Classes</h4>
           <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
         </div>
@@ -55,8 +47,11 @@ export default {
 </template>
 
 <style scoped>
+.row{
+  gap: 4rem;
+}
 .myCont {
-  width: 1300px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -142,6 +137,6 @@ h1 {
 }
 
 .btn-cont {
-  transform: translateY(4rem);
+  transform: translateY(1rem);
 }
 </style>
