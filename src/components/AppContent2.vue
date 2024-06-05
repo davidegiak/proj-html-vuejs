@@ -34,7 +34,7 @@ export default {
       <div class="row justify-content-center gap-3">
         <div v-for="x in storeDave.cards" class="card col-3 p-5 mb-5">
           <h4 class="round-font">{{ x.title }}</h4>
-          <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i>{{ x.date }}</p>
+          <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i> {{ x.date }}</p>
           <p class="lighter-color">{{ x.paragraf }}</p>
           <div class="btn-cont">
             <button type="button" class="button round-font">+ Find more</button>

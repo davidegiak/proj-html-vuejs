@@ -16,7 +16,7 @@ export default {
     <div class="myBgRed">
         <div class="myCont d-flex justify-content-center gap-5 py-5">
             <div class="leftCont">
-                <img class="w-100" src="/img/theme_eduprime_logo.png" alt="">
+                <img class="w-100 pb-3" src="/img/theme_eduprime_logo.png" alt="">
                 <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
                 <div class="d-flex flex-row gap-4">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -73,6 +73,7 @@ export default {
 
 ul {
     list-style: none;
+    width: 13.5rem;
 }
 
 a {

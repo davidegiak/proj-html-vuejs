@@ -26,8 +26,18 @@ let generalData = reactive({
         {title:"Coaching Session", paragraf:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]", date:"20 May 21:30 PM"},
         {title:"Coaching Session", paragraf:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]", date:"20 May 21:30 PM"},
     ],
+    partners:[
+        {url:'/img/partner-1.png'},
+        {url:'/img/partner-2.png'},
+        {url:'/img/partner-3.png'},
+        {url:'/img/partner-4.png'},
+        {url:'/img/partner-5.png'},
+        {url:'/img/partner-6.png'},
+        {url:'/img/partner-7.png'},
+        {url:'/img/partner-8.png'},
+    ],
     headOne:"Get EduPrime",
-    headTwo:"Networking"
+    headTwo:"Networking",
     
 });
 
