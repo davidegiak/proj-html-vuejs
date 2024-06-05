@@ -15,7 +15,7 @@ export default {
             <div class="leftCont">
                 <img class="w-100" src="/public/img/theme_eduprime_logo.png" alt="">
                 <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
-                <div class="d-flex flex-row justify-content-around">
+                <div class="d-flex flex-row gap-4">
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -64,7 +64,7 @@ export default {
 }
 
 .myCont {
-    width: 1600px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@ input{
     background-color: #e56768;
 }
 .fa-brands{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: 3px solid #e9d758;
     border-radius: 50%;
     transition: 300ms ease;

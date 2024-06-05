@@ -1,7 +1,9 @@
 <script>
 export default {
   data() {
+    return {
 
+    }
   }
 }
 </script>
@@ -37,23 +39,7 @@ export default {
       <img class="mt-4 mb-4" src="/img/upcoming-events-calendar-icon.png" alt="" style="width: 60px;">
       <h1 class="round-font mb-5">Upcoming Events</h1>
       <div class="row justify-content-center gap-3">
-        <div class="card col-3 p-5 mb-5">
-          <h4 class="round-font">Coaching Session</h4>
-          <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i> 20 May 21:30 PM</p>
-          <p class="lighter-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]</p>
-          <div class="btn-cont">
-            <button type="button" class="button round-font">+ Find more</button>
-          </div>
-        </div>
-        <div class="card col-3 p-5 mb-5">
-          <h4 class="round-font">Coaching Session</h4>
-          <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i> 20 May 21:30 PM</p>
-          <p class="lighter-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]</p>
-          <div class="btn-cont">
-            <button type="button" class="button round-font">+ Find more</button>
-          </div>
-        </div>
-        <div class="card col-3 p-5 mb-5">
+        <div v-for="x in 3" class="card col-3 p-5 mb-5">
           <h4 class="round-font">Coaching Session</h4>
           <p class="lighter-color"><i class="fa-regular fa-calendar-days"></i> 20 May 21:30 PM</p>
           <p class="lighter-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]</p>
@@ -70,7 +56,7 @@ export default {
 
 <style scoped>
 .myCont {
-  width: 1600px;
+  width: 1300px;
   margin: 0 auto;
 }
 
