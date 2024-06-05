@@ -16,9 +16,9 @@ export default {
                 <img class="w-100" src="/public/img/theme_eduprime_logo.png" alt="">
                 <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
                 <div class="d-flex flex-row justify-content-around">
-                    <i class="fa-brands fa-facebook-f py-3 px-4"></i>
-                    <i class="fa-brands fa-twitter p-3"></i>
-                    <i class="fa-brands fa-instagram p-3"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
             </div>
             <ul>
@@ -38,8 +38,10 @@ export default {
                 </li>
             </ul>
             <div class="rightCont d-flex flex-column gap-2">
-                <input type="text" placeholder="search...">
-                <a href="#"><i class="fa-solid fa-magnifying-glass mb-2"></i></a>
+                <div>
+                    <input type="text" placeholder="search...">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass mb-2"></i></a>
+                </div>
                 <h4 class="round-font">Search categoris</h4>  
                 <div class="d-flex flex-wrap gap-2 justify-content-end">
                     <a class="btLinks" href="#">ECONOMY</a> 
@@ -98,6 +100,16 @@ input{
     position: absolute;
     right: 0;
     top: 0;
+    /* background-color: #e9d758;
+    border: none;
+    color: #fff;
+    padding: 1.3rem;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    transition: 0.4s; */
 }
 .fa-magnifying-glass:hover{
     background-color: #e56768;
@@ -112,6 +124,15 @@ input{
 .fa-brands:hover {
     background-color: #e9d758;
     cursor: pointer;
+}
+.fa-instagram{
+    padding: 0.8rem 1rem 0.8rem 1rem;
+}
+.fa-twitter{
+    padding: 0.8rem 1rem 0.8rem 1rem;
+}
+.fa-facebook-f{
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
 }
 .btLinks{
     border: 1px solid white;
