@@ -7,10 +7,11 @@ export default {
 </script>
 
 <template>
-  <img class="svg-top" src="/public/img/svg/svg-0.svg" alt="" style="width: 100%;">
+  <div class="svg-cont"></div>
+
   <div class="background pb-5">
     <div class="myCont text-center">
-      <img class="mb-4 mt-4" src="/public/img/Clock-and-Bell.png" alt="" style="width: 60px;">
+      <img class="mb-4 mt-4" src="/img/Clock-and-Bell.png" alt="" style="width: 60px;">
       <h1 class="round-font">University year</h1>
       <div class="row justify-content-around position-relative mt-5">
         <div class="cardof first position-relative">
@@ -22,7 +23,7 @@ export default {
           <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
         </div>
       </div>
-      <img src="/public/img/Timeline-Item.png" alt="">
+      <img src="/img/Timeline-Item.png" alt="">
       <div class="row justify-content-around position-relative">
         <div class="cardof therd position-relative">
           <h4 class="round-font">Demo Classes</h4>
@@ -33,7 +34,7 @@ export default {
           <p>In the first week, students try to accommodate with the teaching style and choose their optional courses.</p>
         </div>
       </div>
-      <img class="mt-4 mb-4" src="/public/img/upcoming-events-calendar-icon.png" alt="" style="width: 60px;">
+      <img class="mt-4 mb-4" src="/img/upcoming-events-calendar-icon.png" alt="" style="width: 60px;">
       <h1 class="round-font mb-5">Upcoming Events</h1>
       <div class="row justify-content-center gap-3">
         <div class="card col-3 p-5 mb-5">
@@ -64,7 +65,7 @@ export default {
       <button type="button" class="button-white">View all events</button>
     </div>
   </div>
-  <img class="svg" src="/public/img/svg/svg-1.svg" alt="">
+  <div class="svg-cont-down"></div>
 </template>
 
 <style scoped>
@@ -77,16 +78,21 @@ export default {
   background-color: #e56768;
 }
 
-.svg-top {
+.svg-cont{
   width: 100%;
-  transform: translateY(5px);
-  margin: 0;
+  background-image: url('/img/svg/svg-0.svg');
+  height: 159px;
+  background-size: cover;
+  transform: translateY(1px);
+
 }
 
-.svg {
+.svg-cont-down{
   width: 100%;
-  transform: translateY(-5px);
-  margin: 0;
+  background-image: url('/img/svg/svg-1.svg');
+  height: 159px;
+  background-size: cover;
+  transform: translateY(-1px);
 }
 
 h1 {
@@ -122,7 +128,7 @@ h1 {
   border-radius: 32px;
   font-weight: 600;
   transition: 0.3s ease;
-  box-shadow: 5px 5px 10px #222;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .button-white:hover {
   padding: 16px 43px !important;
@@ -142,7 +148,7 @@ h1 {
   font-weight: 600;
   transition: 0.3s ease;
   width: fit-content;
-  box-shadow: 5px 5px 10px #222;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
