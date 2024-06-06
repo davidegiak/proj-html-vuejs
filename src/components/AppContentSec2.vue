@@ -23,7 +23,7 @@ export default {
     <div class="row">
         <div class="info-row  col-6">
             <div class="info-row-ico">
-                <img src="../assets/img/Exam-icon.png" alt="">
+                <img src="/img/Exam-icon.png" alt="">
             </div>
             <h1 class="round-font">The most efficient examination method</h1>
             <p>

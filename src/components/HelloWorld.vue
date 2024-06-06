@@ -1,5 +1,5 @@
 <script>
-import storeDave from '../data/storeDave.js'
+
 export default {
   data() {
     return {
@@ -9,8 +9,7 @@ export default {
       valore2: "",
       valore3: "",
       valore4: "",
-      bambi: '&#128150',
-      storeDave
+      bambi:'&#128150'
     }
   },
   methods: {
@@ -28,13 +27,13 @@ export default {
       this.isSmooth = true;
     },
 
-    // ho fatto una modifica sui in modo "andare a capo" una volta arrivato alla "fine"
-    // questa parte la spiego direttamente in pagina, il codice è abbastanza autoesplicativo
+// ho fatto una modifica sui in modo "andare a capo" una volta arrivato alla "fine"
+// questa parte la spiego direttamente in pagina, il codice è abbastanza autoesplicativo
     Right() {
       const carousel = document.getElementById('carousel');
       const distanzaScrollabile = carousel.scrollWidth - carousel.clientWidth;
       const distanzaScrollata = carousel.scrollLeft
-
+      
       if (distanzaScrollata >= distanzaScrollabile) {
         carousel.scrollLeft = 0;
         console.log("Tornato all'inizio");
@@ -43,7 +42,7 @@ export default {
         console.log("scrollDX");
       }
     },
-
+    
     Left() {
       const carousel = document.getElementById('carousel');
       const distanzaScrollata = carousel.scrollLeft
@@ -56,21 +55,7 @@ export default {
         console.log("scrollSX");
       }
     },
-    autoScroll() {
-      setInterval(() => {
-        const carousel = document.getElementById('carousel');
-        const distanzaScrollabile = carousel.scrollWidth - carousel.clientWidth;
-        const distanzaScrollata = carousel.scrollLeft
 
-        if (distanzaScrollata >= distanzaScrollabile) {
-          carousel.scrollLeft = 0;
-          console.log("Tornato all'inizio");
-        } else {
-          carousel.scrollLeft += 440;
-          console.log("scrollDX");
-        }
-      }, 6000)
-    }
 
   },
   created() {
@@ -82,69 +67,77 @@ export default {
       this.valore3 = carousel.scrollWidth - carousel.clientWidth
       this.valore4 = carousel.scrollLeft
 
-      if (carousel.scrollLeft == carousel.scrollWidth - carousel.clientWidth) {
-        document.getElementById("heart").innerHTML = "&#128148"
-      }
-      else if (carousel.scrollLeft == 0) {
-        document.getElementById("heart").innerHTML = "&#128150"
-      }
-      else {
-        document.getElementById("heart").innerHTML = "&#128558"
-      }
+     if(carousel.scrollLeft == carousel.scrollWidth - carousel.clientWidth){
+       document.getElementById("heart").innerHTML = "&#128148" 
+     }
+     else if(carousel.scrollLeft == 0){
+      document.getElementById("heart").innerHTML = "&#128150" 
+     }
+     else{
+      document.getElementById("heart").innerHTML = "&#128558" 
+     }
     }, 20)
   },
   mounted() {
-    this.autoScroll()
+
   }
 }
 </script>
 
 
 <template>
-  <section>
-    <div class="debug black">
-      <h1 class="round-font black">Thoughts from our students</h1>
+  <div class="debug">
+    <div>
+      <h2>scroll Width : {{ valore1 }}</h2>
+      <p>la scroll width è lo sapzio totale scrollabile, ovvero la width dell elemento che contiene tutte le forto</p>
     </div>
-  
-    <div class="container">
-      <button @click="Left()">prev</button>
-      <div @mousemove="dragging" @mousedown="isClicked = !isClicked, isSmooth = !isSmooth" @mouseup="mouseRelease()"
-        id="carousel" :class="{ smooth: isSmooth, slow: isSmooth }">
-        <div id="element-container">
-          <div class="elemento">foto 1</div>
-          <div class="elemento">foto 2</div>
-          <div class="elemento">foto 3</div>
-          <div class="elemento">foto 4</div>
-          <div class="elemento">foto 5</div>
-          <div class="elemento">foto 6</div>
-        </div>
+    <div>
+      <h2>carousel Width : {{ valore2 }}</h2>
+      <p> il carousel width è lo spazio visibile (in questo caso 1100px - 4px per i vordi)</p>
+    </div>
+    <div>
+      <h2>max scroll: {{ valore3 }}</h2>
+      <p>il max scrollable distance (ovvero i px di scroll che si possono fare) sara quindi lo spazio scrollabile massimo meno lo spazio visualizzato</p>
+    </div>
+    <div>
+      <h2>pixel scrollati : {{ valore4 }}</h2>
+      <p id="heart">&#128148</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <button @click="Left()">prev</button>
+    <div @mousemove="dragging" 
+         @mousedown="isClicked = !isClicked, isSmooth = !isSmooth" 
+         @mouseup="mouseRelease()"
+         id="carousel" :class="{ smooth: isSmooth, slow: isSmooth }">
+      <div id="element-container">
+        <div class="elemento">foto 1</div>
+        <div class="elemento">foto 2</div>
+        <div class="elemento">foto 3</div>
+        <div class="elemento">foto 4</div>
+        <div class="elemento">foto 5</div>
+        <div class="elemento">foto 6</div>
+        <div class="elemento">foto 7</div>
+        <div class="elemento">foto 8</div>
       </div>
-      <button @click="Right()">next</button>
     </div>
-  </section>
+    <button @click="Right()">next</button>
+  </div>
 </template>
 
 
 
 <style scoped>
-section {
-  background-image: url('/public/img/background-wave3.png');
-  background-size:cover;
-  background-color: aliceblue;
+.debug{
+border: 2px dashed purple;
+width: 1100px;
+margin: auto;
+margin-top: 2rem;
+padding: 1rem;
+text-align: center;
 }
-.debug {
-  border: 2px dashed purple;
-  width: 1100px;
-  margin: auto;
-  margin-top: 2rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  height: 15rem;
-}
-
-.debug h1 {
+.debug div{
   margin-bottom: 1rem;
 }
 
@@ -155,13 +148,12 @@ section {
   height: 69vh;
 }
 
-.slow {
-  transition: scroll-left 0.6s ease;
-  /* Adjust duration as needed */
+.slow {   
+  transition: scroll-left 0.6s ease; /* Adjust duration as needed */ 
 }
 
 #carousel {
-  width: 480px;
+  width: 1100px;
   height: 330px;
   border: 2px dashed green;
   background: rgba(172, 255, 47, 0.329);

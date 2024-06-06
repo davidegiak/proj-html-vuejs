@@ -45,7 +45,7 @@ export default {
                     <input type="text" placeholder="search...">
                     <a href="#"><i class="fa-solid fa-magnifying-glass mb-2"></i></a>
                 </div>
-                <h4 class="round-font">Search categoris</h4>  
+                <h4 class="round-font my-4">Search categoris</h4>  
                 <div class="d-flex flex-wrap gap-2 justify-content-end">
                     <a class="btLinks" href="#">ECONOMY</a> 
                     <a class="btLinks" href="#">DESIGN</a> 
@@ -96,6 +96,7 @@ input{
     border-radius: 30px;
     padding: 1rem;
     width: 100%;
+    outline: transparent;
 }
 .fa-magnifying-glass{
     background-color: #e9d758;

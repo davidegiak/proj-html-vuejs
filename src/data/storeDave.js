@@ -36,6 +36,9 @@ let generalData = reactive({
         {url:'/img/partner-7.png'},
         {url:'/img/partner-8.png'},
     ],
+    footCaroselData: [
+        
+    ],
     headOne:"Get EduPrime",
     headTwo:"Networking",
     
