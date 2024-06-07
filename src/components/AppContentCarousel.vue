@@ -161,6 +161,7 @@ p {
     scroll-snap-type: x;
     caret-color: transparent;
     margin: 0 2rem;
+    user-select: none;
 }
 
 .smooth {

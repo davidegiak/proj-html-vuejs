@@ -86,7 +86,7 @@ export default {
         <div class="container-lg" @mouseleave="onHover = false" @mouseover="onHover = true">
 
             <div class="title">
-                <h1 class="round-font">Thoughts from our students</h1>
+                <h1 class="round-font black">Thoughts from our students</h1>
             </div>
 
             <div id="footerCarosell" @mousemove="dragging" @mousedown="isClicked = !isClicked, isSmooth = !isSmooth"
@@ -148,14 +148,12 @@ h1 {
 #container {
     width: 100%;
     justify-content: center;
-    background-image: url(img/background-wave3.png);
+    background-image: url('/img/background-wave3.png');
     background-color: #F7F8FA;
-    /* background-color: #1a2f5a; */
     background-size: cover;
 }
 
 #footerCarosell {
-    /* background-color: #1a2f5a; */
     margin: auto;
     width: 100%;
     height: 460px;
@@ -163,8 +161,7 @@ h1 {
     transition: 2s ease;
     caret-color: transparent;
     padding: 1rem 0;
-    /* scroll-snap-type: x mandatory; */
-    /* padding-right: 0rem; */
+    user-select: none;
 }
 
 /* SCROLL TYPE */
@@ -186,7 +183,6 @@ h1 {
     width: 200%;
     height: 100%;
     align-items: start;
-    /* scroll-snap-align: start; */
 }
 
 
@@ -227,7 +223,6 @@ h1 {
 }
 
 .img-container {
-    /* background: rgba(172, 255, 47, 0.418); */
     width: 80px;
     height: 80px;
     margin-right: 1rem;

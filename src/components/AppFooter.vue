@@ -4,7 +4,10 @@ export default {
     data() {
         return {
             storeDave,
+            iconHover: false
         }
+    },
+    methods: {
     },
     mounted() {
         console.log(storeDave.info)
@@ -17,7 +20,8 @@ export default {
         <div class="myCont d-flex justify-content-center gap-5 py-5">
             <div class="leftCont">
                 <img class="w-100 pb-3" src="/img/theme_eduprime_logo.png" alt="">
-                <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+                <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities,
+                    courses, secondary schools etc.</p>
                 <div class="d-flex flex-row gap-4">
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-twitter"></i>
@@ -42,18 +46,19 @@ export default {
             </ul>
             <div class="rightCont d-flex flex-column gap-2">
                 <div>
-                    <input type="text" placeholder="search...">
-                    <a href="#"><i class="fa-solid fa-magnifying-glass mb-2"></i></a>
+                    <input :class="{ 'w-75': iconHover }" type="text" placeholder="search...">
+                    <a href="#"><i @mouseover="iconHover = true" @mouseleave="iconHover = false"
+                            class="fa-solid fa-magnifying-glass mb-2"></i></a>
                 </div>
-                <h4 class="round-font my-4">Search categoris</h4>  
+                <h4 class="round-font my-4">Search categoris</h4>
                 <div class="d-flex flex-wrap gap-2 justify-content-end">
-                    <a class="btLinks" href="#">ECONOMY</a> 
-                    <a class="btLinks" href="#">DESIGN</a> 
-                    <a class="btLinks" href="#">COACHING</a> 
-                    <a class="btLinks" href="#">BUSINESS</a> 
-                    <a class="btLinks" href="#">MEDICINE</a> 
-                    <a class="btLinks" href="#">LAW</a> 
-                    <a class="btLinks" href="#">FITNESS</a> 
+                    <a class="btLinks" href="#">ECONOMY</a>
+                    <a class="btLinks" href="#">DESIGN</a>
+                    <a class="btLinks" href="#">COACHING</a>
+                    <a class="btLinks" href="#">BUSINESS</a>
+                    <a class="btLinks" href="#">MEDICINE</a>
+                    <a class="btLinks" href="#">LAW</a>
+                    <a class="btLinks" href="#">FITNESS</a>
                 </div>
                 <p class="finalP"> ModelTheme. All rights reserved. </p>
             </div>
@@ -81,65 +86,84 @@ a {
     text-decoration: none;
     transition: 300ms ease;
 }
-li:hover a{
+
+li:hover a {
     color: #e9d758;
 }
-.leftCont{
+
+.leftCont {
     width: 25rem;
 }
-.rightCont{
+
+.rightCont {
     position: relative;
     width: 26rem;
 }
-input{
+
+input {
     border: transparent;
     border-radius: 30px;
     padding: 1rem;
     width: 100%;
+    transition: .3s;
     outline: transparent;
 }
-.fa-magnifying-glass{
+
+.fa-magnifying-glass {
     background-color: #e9d758;
     padding: 1.3rem;
     border-radius: 50%;
     position: absolute;
-    right: 0;
-    top: 0;
-    /* background-color: #e9d758;
-    border: none;
-    color: #fff;
-    padding: 1.3rem;
-    text-align: center;
-    border-radius: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    transition: 0.4s; */
+    right: -1px;
+    top: -1px;
+    transition: ease .3s;
 }
-.fa-magnifying-glass:hover{
+
+.fa-magnifying-glass:hover {
     background-color: #e56768;
+    transform: rotate(1turn);
+    box-shadow: rgba(2, 2, 2, 0.5) 0 0 20px 5px;
 }
-.fa-brands{
+
+.fa-brands {
     font-size: 1.2rem;
     border: 3px solid #e9d758;
     border-radius: 50%;
-    transition: 300ms ease;
+    transition: .3s ease;
 }
-
 .fa-brands:hover {
     background-color: #e9d758;
     cursor: pointer;
+    transform: rotate(1turn);
 }
-.fa-instagram{
+.fa-instagram {
     padding: 0.8rem 1rem 0.8rem 1rem;
+    transition: .3s ease;
 }
-.fa-twitter{
+.fa-instagram:hover {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(214deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    border: 3px solid white;
+}
+.fa-twitter {
     padding: 0.8rem 1rem 0.8rem 1rem;
+    transition: .3s ease;
 }
-.fa-facebook-f{
+.fa-twitter:hover {
+    background-color: #1C9CEA;
+    border: 3px solid white;
+}
+
+.fa-facebook-f {
     padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    transition: .3s ease;
 }
-.btLinks{
+.fa-facebook-f:hover{
+    background-color: #0866FF;
+    border: 3px solid white;
+}
+
+.btLinks {
     border: 1px solid white;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -148,11 +172,12 @@ input{
     font-size: 0.8rem;
 }
 
-.btLinks:hover{
+.btLinks:hover {
     background-color: #e9d758;
     border: 1px solid transparent
 }
-.finalP{
+
+.finalP {
     color: #e9d758;
     text-align: end;
     margin-top: 1rem;
